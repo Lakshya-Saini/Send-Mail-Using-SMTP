@@ -27,4 +27,4 @@ app.use("/healthcheck", (req, res) => {
 // Routes
 app.use("/api/user", user);
 
-app.listen(keys.port, () => console.log(`App running on port ${port}`));
+app.listen(keys.port, () => console.log(`App running on port ${keys.port}`));

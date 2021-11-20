@@ -4,6 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const user = require("./routes/user");
+const keys = require("./config/keys");
 const app = express();
 
 // Middleware
@@ -26,5 +27,4 @@ app.use("/healthcheck", (req, res) => {
 // Routes
 app.use("/api/user", user);
 
-const port = 4000;
-app.listen(port, () => console.log(`App running on port ${port}`));
+app.listen(keys.port, () => console.log(`App running on port ${port}`));
